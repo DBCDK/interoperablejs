@@ -1,5 +1,4 @@
 var test = require('test');
-var print = sys.print;
 
 exports.foo = require.curryId(function (id) {
     return id;
@@ -20,5 +19,5 @@ var b = require('b');
 test.assert(b.foo() == 'b', 'curryId in third party module');
 test.assert(b.bar() == 'program', 'curryId in copied export');
 
-print('DONE', 'info');
+test.print('DONE', 'info');
 

@@ -1,5 +1,3 @@
-var print = sys.print;
-
 exports.foo = require.curryId(function (id) {
     return id;
 });
