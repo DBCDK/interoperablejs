@@ -1,4 +1,4 @@
-var print = sys.print;
+var test = require('test');
 var hasOwnProperty = require('hasOwnProperty');
 var toString = require('toString');
-print('DONE', 'info');
+test.print('DONE', 'info');

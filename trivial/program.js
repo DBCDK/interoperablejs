@@ -3,7 +3,9 @@
 //
 
 var print;
-if (sys.print) {
+if (this.print) {
+    print = this.print;
+} else if (sys.print) {
     print = sys.print;
 } else if (typeof alert !== "undefined") {
     print = alert;

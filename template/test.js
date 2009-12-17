@@ -1,6 +1,11 @@
 
 exports.print = function () {
-    sys.print.apply(undefined, arguments);
+    if (typeof print !== "undefined")
+      print.apply(undefined, arguments);
+    else {
+      var stdout = require('system').stdout;
+      stdout.print.apply(stdout, arguments);
+    }
 };
 
 exports.assert = function (guard, message) {
